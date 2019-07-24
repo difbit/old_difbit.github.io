@@ -60,22 +60,16 @@
 
 <script>
 
-var modal = document.getElementsByClassName("modal");
+
+</script>
+
+
+<script>
+
 var btn = document.getElementById("myBtn");
-
-btn.onclick = function() {
-    modal.style.display = "block";
-    modal.src = this.src;
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-
 var slideIndex = 1;
+var modal = document.getElementsByClassName("modal");
+
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -89,6 +83,18 @@ function currectSlide(n) {
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("modal");
+
+    btn.onclick = function() {
+        slides.style.display = "block";
+        slides.src = this.src;
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+	    slides.style.display = "none";
+        }
+    }
+
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
