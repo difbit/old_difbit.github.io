@@ -10,6 +10,9 @@
       .my-modal {
 	z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)
       }
+      .my-black {
+	background-color:#000
+      }
       .mySlides {
 	display: none
       }
@@ -46,8 +49,6 @@
     </p>
 
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 <div class="slideshow-container">
 
@@ -67,11 +68,14 @@
     <button id="myBtn">Inspect</button>
 </div>
 
-<div id="myModal" class="my-modal">
+<div id="myModal" class="my-modal my-black">
     <div class="modal-content">
         <div class="content" style="max-width:1200px">
 	    <img class="mySlides" src="ahven_s.png">
+	    <img class="mySlides" src="ahven_s.png">
 	    <img class="mySlides" src="ankka_s.png">
+       	    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 	</div>
     </div>
 </div>
@@ -94,6 +98,7 @@ function closeModal() {
 
 var btn = document.getElementById("myBtn");
 var slideIndex = 1;
+var modal = document.getElementById('myModal');
 
 showSlides(slideIndex);
 
