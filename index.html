@@ -42,18 +42,29 @@
 
 <div class="slideshow-container">
 
-<div id="fish_modal" class="modal">
+<div id="fish_modal" class="myModal">
     <div class="numbertext">1 / 2</div>
-    <img src="ahven_s.png" name="ahven" style="max-width:100%;height:auto;"/>
+    <img src="ahven_s.png" name="ahven" style="max-width:100%;height:auto;"
+    onclick="openModal()currentSlide(1)"/>
     <div class="text">A picture of a fish</div>
     <button id="myBtn">Inspect</button>
 </div>
 
-<div id="duck_modal" class="modal">
+<div id="duck_modal" class="myModal">
     <div class="numbertext">2 / 2</div>
-    <img src="ankka_s.png" name="ankka" style="max-width:100%;height:auto;"/>
+    <img src="ankka_s.png" name="ankka" style="max-width:100%;height:auto;"
+    onclick="openModal()currentSlide(2)"/>
     <div class="text">A picture of a duck</div>
     <button id="myBtn">Inspect</button>
+</div>
+
+<div id="myModal">
+    <div class="modal-content">
+        <div class="content" style="max-width:1200px">
+	    <img class="mySlides" src="ahven_s.png">
+	    <img class="mySlides" src="ankka_s.png">
+	</div>
+    </div>
 </div>
 
 </div>
@@ -65,10 +76,15 @@
 
 
 <script>
+function openModal() {
+    document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById('myModal').style.display = "none";
 
 var btn = document.getElementById("myBtn");
 var slideIndex = 1;
-var modal = document.getElementsByClassName("slideshow-container");
 
 showSlides(slideIndex);
 
@@ -82,25 +98,19 @@ function currectSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("modal");
-
-    btn.onclick = function() {
-        slides.style.display = "block";
-        slides.src = this.src;
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-	    slides.style.display = "none";
-        }
-    }
-
+    var slides = document.getElementsByClassName("mySlides");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slides[slideIndex-1].style.display = "block";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 </script>
