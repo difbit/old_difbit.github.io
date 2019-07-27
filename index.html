@@ -19,6 +19,9 @@
       .my-hover-shadow:hover{
 	box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
       }
+      .my-third: {
+	float:left;width:100%
+      }
       p.a {
         white-space: nowrap;
       }
@@ -54,16 +57,20 @@
 
 <div id="fish_modal" class="myModal">
     <div class="numbertext">1 / 2</div>
+    <div class="my-third">
     <img src="ahven_s.png" name="ahven" style="max-width:100%;height:auto;"
-    onclick="openModal()currentSlide(1)" class="my-hover-shadow"/>
+    onclick="onClick(this)" class="my-hover-shadow"/>
+    </div>
     <div class="text">A picture of a fish</div>
     <button id="myBtn">Inspect</button>
 </div>
 
 <div id="duck_modal" class="myModal">
     <div class="numbertext">2 / 2</div>
+    <div class="my-third">
     <img src="ankka_s.png" name="ankka" style="max-width:100%;height:auto;"
-    onclick="openModal()currentSlide(2)" class="my-hover-shadow"/>
+    onclick="onClick(this)" class="my-hover-shadow"/>
+    </div>
     <div class="text">A picture of a duck</div>
     <button id="myBtn">Inspect</button>
 </div>
@@ -82,8 +89,16 @@
 
 </div>
 
-<script>
+<div id="modal_01" class="modal" onclick="this.style.display='none'">
+    <img id="img01" style="width:100%">
+</div>
 
+
+<script>
+    function onClick(element) {
+	document.getElementById("img01").src = element.src;
+	document.getElementById("modal_01").style.display = "block";
+    }
 
 </script>
 
