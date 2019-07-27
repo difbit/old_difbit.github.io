@@ -22,6 +22,9 @@
       .my-third: {
 	float:left;width:100%
       }
+      .my-animate-zoom {
+	animation:animatezoom 0.6s
+      }@keyframes animatezoom {from{transform:scale(0)} to{transform:scale(1)}}
       p.a {
         white-space: nowrap;
       }
@@ -87,7 +90,9 @@
 </div>
 
 <div id="modal_01" class="modal" onclick="this.style.display='none'">
-    <img id="img01" style="width:100%">
+    <div class="my-animate-zoom">
+        <img id="img01" style="width:100%">
+    </div>
 </div>
 
 
