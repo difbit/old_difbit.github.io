@@ -25,7 +25,7 @@
         white-space: nowrap;
       }
       #modal_01 {
-        padding-bottom: 70%;
+        padding-bottom: 50%;
 	padding-left: 40%;
       }
       * {
@@ -58,28 +58,23 @@
 
 <div class="slideshow-container">
 
-	<div class="myModal">
-	    <span>1 / 2</span>
-	    <img src="tree_01.jpg" name="ahven" style="max-width:30%;height:auto;"
-	    onclick="onClick(this)" class="my-hover-shadow"/>
-	    </br>
-	    <span>A tree #1</span>
-	</div>
+    <span>1 / 2</span>
+    <img src="tree_01.jpg" name="ahven" style="max-width:30%;height:auto;"
+    onclick="onClick(this)" class="my-hover-shadow"/>
+    </br>
+    <span>A tree #1</span>
 
+    <span>2 / 2</span>
+    <img src="tree_02.jpg" name="ankka" style="max-width:30%;height:auto;"
+    onclick="onClick(this)" class="my-hover-shadow"/>
+    </br>
+    <span>A tree #2</span>
 
-	<div class="myModal">
-	    <span>2 / 2</span>
-	    <img src="tree_02.jpg" name="ankka" style="max-width:30%;height:auto;"
-	    onclick="onClick(this)" class="my-hover-shadow"/>
-	    </br>
-	    <span>A tree #2</span>
-	</div>
-
-	<div id="modal_01" class="modal" onclick="this.style.display='none'">
-	    <div class="my-animate-zoom">
-		<img id="img01" style="width:100%">
-	    </div>
-	</div>
+<div id="modal_01" class="modal" onclick="this.style.display='none'">
+    <div class="my-animate-zoom">
+	<img id="img01" style="width:100%">
+    </div>
+</div>
 
 </div>
 
