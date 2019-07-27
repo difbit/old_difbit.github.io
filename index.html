@@ -19,9 +19,6 @@
       .my-hover-shadow:hover{
 	box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
       }
-      .my-third: {
-	float:left;width:100%
-      }
       .my-animate-zoom {
 	animation:animatezoom 0.6s}@keyframes animatezoom {from{transform:scale(0)} to{transform:scale(1)}}
       p.a {
@@ -61,14 +58,29 @@
 
 <div class="slideshow-container">
 
-<div id="fish_modal" class="myModal">
-    <div class="numbertext">1 / 2</div>
-    <div class="my-third">
+<div class="myModal">
+    <span>1 / 2</span>
     <img src="tree_01.jpg" name="ahven" style="max-width:30%;height:auto;"
     onclick="onClick(this)" class="my-hover-shadow"/>
-    </div>
-    <div class="text">A tree #1</div>
+    <span>A tree #1</span>
 </div>
+
+<div id="modal_01" class="modal" onclick="this.style.display='none'">
+    <div class="my-animate-zoom">
+        <img id="img01" style="width:80%">
+    </div>
+</div>
+
+<div class="myModal">
+    <span>2 / 2</span>
+    <img src="tree_02.jpg" name="ankka" style="max-width:30%;height:auto;"
+    onclick="onClick(this)" class="my-hover-shadow"/>
+    <span>A tree #2</span>
+</div>
+
+</div>
+
+
 
 <div id="myModal" class="my-modal my-black">
     <div class="modal-content">
@@ -78,23 +90,6 @@
        	    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 	    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 	</div>
-    </div>
-</div>
-
-<div id="duck_modal" class="myModal">
-    <div class="numbertext">2 / 2</div>
-    <div class="my-third">
-    <img src="tree_02.jpg" name="ankka" style="max-width:30%;height:auto;"
-    onclick="onClick(this)" class="my-hover-shadow"/>
-    </div>
-    <div class="text">A tree #2</div>
-</div>
-
-</div>
-
-<div id="modal_01" class="modal" onclick="this.style.display='none'">
-    <div class="my-animate-zoom">
-        <img id="img01" style="width:80%">
     </div>
 </div>
 
