@@ -35,6 +35,14 @@
       * {
         padding= 0;
       }
+      .row {
+        display: flex;
+      }
+      .column {
+        flex: 50%;
+        padding: 10px;
+        height: 300px;
+      }
     </style>
   </head>
 
@@ -60,25 +68,22 @@
 
 
     <section>
-<div class="slideshow-container pull-left">
-  <div>
+<div class="slideshow-container pull-left row">
+  <div class="column">
     <img src="tree_01.jpg" name="tree_01" style="max-width:30%;height:auto;"
     onclick="onClick(this)" class="my-hover-shadow"/>
     </br>
     <span>A tree #1</span>
   </div>
-  <div>
+  <div class="column">
     <img src="tree_02.jpg" name="tree_02" style="max-width:30%;height:auto;"
     onclick="onClick(this)" class="my-hover-shadow"/>
     </br>
     <span>A tree #2</span>
   </div>
-  <div>
-	  <img src="ankka_s.png"/>
-  </div>
     </section>
     <aside>
-<div id="modal_01" class="modal pull-right" onclick="this.style.display='none'">
+<div id="modal_01" class="modal pull-right column" onclick="this.style.display='none'">
     <div class="my-animate-zoom">
 	<img id="img01" style="width:70%">
     </div>
