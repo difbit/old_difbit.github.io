@@ -51,15 +51,15 @@
       }
       #floating {
         width: 100px;
-	height: 100px;
+	height: 10%;
 	background: blue;
-	position:relative;
+	position: relative;
 	animation: movethis 5s infinite;
       }
       @keyframes movethis {
         0% {top: 0px; left: 0px;}
-	25% {top: 0px; left: 100px;}
-	50% {top: 100px; left: 100px;}
+	25% {top: 0px; left: 50%;}
+	50% {top: 100px; left: 50%;}
 	75% {top: 100px: left: 0px;}
 	100% {top: 0px; left: 0px;}
       }
@@ -81,7 +81,9 @@
 		<a class="link" href="page2.html">Click here to Page 2</a>
 	     </ul>
 	</nav>
-	<div class="row" id="floating"/>
+	<div class="row" id="floating">
+		<span>Hello</span>
+	</div>
     <h3 style="background-color:rgba(255, 100, 70, 0.2);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.3);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.4);"></h3>
