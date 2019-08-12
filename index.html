@@ -86,9 +86,28 @@
     <h3 style="background-color:rgba(255, 100, 70, 0.3);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.4);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.5);"></h3>
-    <button onclick="time()">Start time</button>
+    <button onclick="count()">Start time</button>
     <input type="text" id="time"/>
-    <script type="text/javascript">window.onload = time();</script>
+    <script type="text/javascript">window.onload = count();</script>
+
+<script>
+	var s = 0;
+	var t;
+	var timer_is_on = 0;
+
+function getTime() {
+	document.getElementById("txt").value = c;
+	c += 1;
+	t = setTimeout(getTime, 1000);
+}
+
+function startTime() {
+	if (!timer_is_on) {
+		timer_is_on = 1;
+		getTime();
+	}
+}
+
 
     </section>
       <p class="a">
