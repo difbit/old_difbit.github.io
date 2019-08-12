@@ -1,8 +1,7 @@
 var d = new Date();
-function time(id)
+function time()
 {
-	s = d.getSeconds();
-	document.getElementById(id).innerHTML = s;
-	setTimeout('time("'+id+'");','1000');
-	return true;
+	document.getElementById('time').value = s;
+	s = s + 1;
+	t = setTimeout(time, 1000);
 }
