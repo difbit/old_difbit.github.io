@@ -89,7 +89,9 @@
 
 <script>
 	var d = new Date();
-	document.getElementById("time").innerHTML = d.getSeconds();
+	while (true) {
+		document.getElementById("time").innerHTML = d.getSeconds();
+	}
 </script>
 
 
