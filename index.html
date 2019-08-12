@@ -89,8 +89,15 @@
 
 <script>
 	var d = new Date();
-	while (true) {
-		document.getElementById("time").innerHTML = d.getSeconds();
+	function time(id)
+	{
+		s = d.getSeconds();
+		if (s < 10)
+		{
+			s = "0"+s;
+		}
+		document.getElementById(id).innerHTML = s;
+		return true;
 	}
 </script>
 
