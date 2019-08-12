@@ -64,6 +64,7 @@
 	100% {top: 0px; left: 0px;}
       }
     </style>
+    <script type="text/javascript" src="js/time.js"></script>
   </head>
 
 <body style="background-color:Green;">
@@ -85,24 +86,8 @@
     <h3 style="background-color:rgba(255, 100, 70, 0.3);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.4);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.5);"></h3>
-    <p id="time"/>
+    <p id="time"></p>
     <script type="text/javascript">window.onload = time('time');</script>
-
-<script>
-	var d = new Date();
-	function time(id)
-	{
-		s = d.getSeconds();
-		if (s < 10)
-		{
-			s = "0"+s;
-		}
-		document.getElementById(id).innerHTML = s;
-		return true;
-	}
-</script>
-
-
 
     </section>
       <p class="a">
