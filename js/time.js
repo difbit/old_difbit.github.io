@@ -1,4 +1,6 @@
 var d = new Date();
+var s = 0;
+var t;
 function time()
 {
 	document.getElementById('time').value = s;
