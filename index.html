@@ -90,7 +90,7 @@
     <h3 style="background-color:rgba(255, 100, 70, 0.5);"></h3>
     <button onclick="startTime()">Start time</button>
     <input type="text" id="txt"/>
-    <span id="txt"/>
+    <input type="text" id="txt_2"/>
     <script type="text/javascript">window.onload = startTime();</script>
 
 <script>
@@ -101,7 +101,8 @@
 
 function getTime() {
 	document.getElementById("txt").value = s;
-	if (c < 10) {
+	document.getElementById("txt_2").value = c;
+	if (0 < c < 10) {
 		s = '0' + c
 	}
 	if (c < 59) {
