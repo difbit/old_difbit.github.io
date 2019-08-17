@@ -97,7 +97,12 @@
 
 function getTime() {
 	document.getElementById("txt").value = c;
-	c += 1;
+	if (c < 59) {
+		c += 1;
+	}
+	else {
+		c = 0;
+	}
 	t = setTimeout(getTime, 1000);
 }
 
