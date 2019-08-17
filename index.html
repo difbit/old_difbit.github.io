@@ -100,8 +100,6 @@
 	var timer_is_on = 0;
 
 function getTime() {
-	document.getElementById("txt").value = s;
-	document.getElementById("txt_2").value = c;
 	if (c < 10) {
 		s = '0' + c
 	}
@@ -114,6 +112,8 @@ function getTime() {
 	else {
 		c = 0;
 	}
+	document.getElementById("txt").value = s;
+	document.getElementById("txt_2").value = c;
 	t = setTimeout(getTime, 1000);
 }
 
