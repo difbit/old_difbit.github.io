@@ -93,13 +93,14 @@
 
 <script>
 	var c = 0;
+	var s;
 	var t;
 	var timer_is_on = 0;
 
 function getTime() {
-	document.getElementById("txt").value = c;
+	document.getElementById("txt").value = s;
 	if (c < 10) {
-		c = '0' + c
+		s = '0' + c
 	}
 	if (c < 59) {
 		c += 1;
