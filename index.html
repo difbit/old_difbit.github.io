@@ -47,7 +47,7 @@
       	height:10px;
       }
       #txt {
-     	height:30px; 
+     	height:22px; 
       }
       * {
         padding= 0;
@@ -99,8 +99,10 @@
     <h3 style="background-color:rgba(255, 100, 70, 0.3);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.4);"></h3>
     <h3 style="background-color:rgba(255, 100, 70, 0.5);"></h3>
+    <?php
+	echo "Timer";
+    ?>
     <input type="text" id="txt"/>
-    <input type="text" id="txt_2" onload="startTime();"/>
     <section id="text_section">
 	    <span id="txt"></span>
     </section>
@@ -125,7 +127,6 @@ function getTime() {
 		c = 0;
 	}
 	document.getElementById("txt").value = s;
-	document.getElementById("txt_2").value = c;
 	t = setTimeout(getTime, 1000);
 }
 
