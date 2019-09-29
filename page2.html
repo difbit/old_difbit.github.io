@@ -6,10 +6,46 @@
 	<div id="page_2_content">
 		<center>
 		<h1 style="background-color:Red;">Welcome to Page 2</h1>
-		<span>More stuff will be added later</span>
+		<span id="span_drag" style="position: absolute;">More stuff will be added later</span>
 		</br>
 		<a href="index.html">Return to home page</a>
 		</center>
 	</div>
 	</body>
+
+<script>
+dragElement(document.getElementById("span_drag"));
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDown;
+
+	function dragMouseDown(e) {
+	    e = e || window.event;
+	    e.preventDefault();
+	    pos3 = e.clientX;
+	    pos4 = e.clinetY;
+	    document.onmouseup = closeDragElement;
+	    document.onmousemove = elementDrag;
+	}
+
+	function elementDrag(e) {
+	    e = e || window.event;
+	    e.preventDefault();
+	    pos1 = pos3 - e.clinetX;
+	    pos2 = pos4 - e.clinetY;
+	    pos3 = e.clientX;
+	    pos4 = e.clientY;
+	    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+	    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+	}
+
+	function closeDragElement() {
+	    document.onmouseup = null;
+	    document.onmousemove = null;
+	}
+}
+
+</script>
+
 </html>
