@@ -2,8 +2,9 @@
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
   <head>
-    <meta name="description" content="Timonsivut">
+    <meta name="description" content="timonsivut">
     <title>Timonsivut</title>
+  </head>
     <style>
       .my-modal {
 	z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)
@@ -79,12 +80,11 @@
       }
     </style>
     <script type="text/javascript" src="js/time.js"></script>
-  </head>
 
 <body style="background-color:PapayaWhip;" onload="startTime();">
 <div id="modal_01" class="modal pull-right column" onclick="this.style.display='none'">
     <div class="my-animate-zoom">
-	<img id="img01" style="width:75%">
+	<img id="img01" alt="tree" style="width:75%">
     </div>
 </div>
 	<center>
@@ -161,13 +161,13 @@ function startTime() {
 </div>
 <div class="slideshow-container pull-left row">
   <div class="column">
-    <img src="tree_01.jpg" name="tree_01" style="max-width:60%;height:auto;"
+    <img src="tree_01.jpg" alt="tree" name="tree_01" style="max-width:60%;height:auto;"
     onclick="onClick(this)" class="my-hover-shadow"/>
     </br>
     <span>A tree #1</span>
   </div>
   <div class="column">
-    <img src="tree_02.jpg" name="tree_02" style="max-width:60%;height:auto;"
+    <img src="tree_02.jpg" alt="tree" name="tree_02" style="max-width:60%;height:auto;"
     onclick="onClick(this)" class="my-hover-shadow"/>
     </br>
     <span>A tree #2</span>
@@ -183,8 +183,8 @@ function startTime() {
 <div id="myModal" class="my-modal my-black">
     <div class="modal-content">
         <div class="content" style="max-width:1200px">
-	    <img class="mySlides" src="ahven_s.png">
-	    <img class="mySlides" src="ankka_s.png">
+	    <img class="mySlides" alt="ahven" src="ahven_s.png">
+	    <img class="mySlides" alt="ankka" src="ankka_s.png">
        	    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 	    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 	</div>
